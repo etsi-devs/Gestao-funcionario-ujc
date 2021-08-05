@@ -102,10 +102,10 @@ public class FuncionarioController {
         return listar(model);
     }
 
-    @GetMapping("/pesquisar/{nome}")
-    public List<Funcionario> pesquisarNome(@PathVariable String nome) {
-        return iFuncionarioRepository.buscarPorNome(nome);
-    }
+    // @GetMapping("/pesquisar/{nome}")
+    // public List<Funcionario> pesquisarNome(@PathVariable String nome) {
+    //     return iFuncionarioRepository.buscarPorNome(nome);
+    // }
 
     /**
      * SECCAO PARA CADASTRO DE REQUISICOES DO FUNCIONARIO
