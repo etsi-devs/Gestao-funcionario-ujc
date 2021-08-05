@@ -136,7 +136,9 @@
                     <div class="container-fluid">
                         <div class="row">
                             <!-- SELECT2 EXAMPLE -->
-                            <form action="">
+                            <form
+                                th:action="${pre_req.id == null} ? @{/requisitantes/gravar} : @{/requisitantes/editar}"
+                                th:object="${pre_req}" method="POST">
                                 <div class="card card-primary" style="margin-left: 400px; width: 100%;padding: 10px;">
                                     <div class="card-header">
                                         <h3 class="card-title">Detalhes do Requisição</h3>
@@ -147,11 +149,13 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Data de Inicio</label>
-                                                    <input type="date" name="dataIni" id="dataAct" class="form-control">
+                                                    <input type="date" name="dataIni" id="dataAct" class="form-control"
+                                                        th:field="*{data_inicio}">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Data de Término</label>
-                                                    <input type="date" name="dataTer" id="dataAct" class="form-control">
+                                                    <input type="date" name="dataTer" id="dataAct" class="form-control"
+                                                        th:field="*{data_fim}">
                                                 </div>
                                                 <!-- /.form-group -->
                                                 <div class="form-group">
@@ -164,7 +168,7 @@
                                         </div>
                                     </div>
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary" onclick=alerta()>Submeter</button>
+                                        <button type="submit" class="btn btn-primary">Submeter</button>
                                     </div>
                                     <!-- /.row -->
                                 </div>

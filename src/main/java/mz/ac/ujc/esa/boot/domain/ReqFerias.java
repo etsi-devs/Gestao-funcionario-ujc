@@ -15,7 +15,7 @@ public class ReqFerias extends AbstractEntity<Long> {
 	@Column(name = "data_fim", nullable = false, columnDefinition = "DATE")
 	private Date data_fim;
 
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String estado;
 
 	@ManyToOne

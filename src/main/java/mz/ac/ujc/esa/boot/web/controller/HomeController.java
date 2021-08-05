@@ -7,12 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @GetMapping("admin")
-    public String admin() {
+    public String adminView() {
         return "/iframe";
     }
 
     @GetMapping("home")
-    public String home() {
+    public String userView() {
         return "user/iframe";
+    }
+
+    @GetMapping("gestor")
+    public String gestorView() {
+        return "gestor/iframe";
     }
 }
