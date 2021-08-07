@@ -2,15 +2,19 @@ package mz.ac.ujc.esa.boot.domain;
 
 import java.util.Date;
 import javax.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "pre_req")
 public class Pre_req extends AbstractEntity<Long> {
 
+    @DateTimeFormat(iso = ISO.DATE)
     @Column(name = "data_inicio", nullable = false, columnDefinition = "DATE")
     private Date data_inicio;
 
+    @DateTimeFormat(iso = ISO.DATE)
     @Column(name = "data_fim", nullable = false, columnDefinition = "DATE")
     private Date data_fim;
 
@@ -18,7 +22,7 @@ public class Pre_req extends AbstractEntity<Long> {
     private String estado;
 
     @ManyToOne
-    @JoinColumn(name = "funcionario_id_fk", nullable = false)
+    @JoinColumn(name = "funcionario_id_fk", nullable = true)
     private Funcionario funcionario;
 
     public Date getData_inicio() {
