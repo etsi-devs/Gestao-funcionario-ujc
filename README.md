@@ -2,4 +2,5 @@
 
 # Basic Routes for testing
 # /admin - for admin view
-# /home - for user view
+# /home - for funcionario view
+# /gestor - for gestor view
