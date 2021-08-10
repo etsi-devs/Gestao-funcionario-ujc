@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
     <head>
         <meta charset="UTF-8">
@@ -31,7 +31,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" href="#" style="color: white"><i
+                    
+
+                            <a th:href="@{/logout}" style="color: white; display: block;
+                            padding: 0.5rem 1rem;" >
+                                <i
                             class="fas fa-sign-out-alt"></i> Sair</a>
                 </li>
             </ul>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>BEM VINDO</title>
+<style>
+    a{
+        color: black;
+        font-size: larger;
+    }
+    a:hover{
+        color: brown;
+    }
+</style>
+</head>
+<body bgcolor="#87cefa">
+
+
+
+<center style="margin-top: 200px;">
+    <h3> ESCOLHA COMO ENTRAR NO SISTEMA</h3>
+    <div class="container-fluid" >
+
+        <li>
+            <a th:href="@{/home}">ENTRAR COMO FUNCIONARIO</a>
+        </li>
+        <li>
+            <a th:href="@{/gestor}">ENTRAR COMO GESTOR IMEDIATO</a>
+        </li>
+        <li>
+            <a th:href="@{/admin}"> ENTRAR COMO ADMIN</a>
+        </li>
+    </div>
+</center>
+
+
+</body>
+</html>
